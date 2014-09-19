@@ -1,0 +1,60 @@
+/*
+Created on Apr 3, 2011
+
+@author: Max Clarke
+*/
+body
+{
+	margin:0px;
+	padding:0px;
+}
+div.center
+{
+	margin-left: auto;
+	margin-right: auto;	
+	width: 1000px;
+}
+
+div.container
+{
+	margin: 0px;
+	padding: 0px;
+	width: 1000px;
+	min-height: 100%;
+}
+
+.text_center
+{
+	text-align: center;
+}
+
+.splains
+{
+	
+}
+
+.form_container
+{
+	background-image: url(/media/img/RobotLooky.png);
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.form
+{
+	position: relative;
+	width:400px;
+	right: 0px;
+	margin-right: 0px;
+	margin-left: auto;
+}
+
+.response_container
+{}
+
+.response_text
+{}
+
+.footer_container
+{}
+

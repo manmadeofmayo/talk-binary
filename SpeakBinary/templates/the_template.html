@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Speak like a robot!{% endblock %}
+{% block body %}
+	<h1> *Beep boop beep*</h1>
+	<h3> [Speak Like a Robot] </h3>
+	<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fbeepbeepboopbeep.com&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;font=lucida+grande&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+	<div class="booty">
+		<div class="splains">
+			<p>The premise is simple: Speak like a robot.  Turn all those gross words into sweet and simple ones and zeros.  Delight your friends with your newfound mathematical proficiency and sexy emotionless exterior!</p>
+			<p>This also translates robot back into meat-speak!</p>
+		</div>
+		<form action="{% url 'speakBinary' %}" method="post"> {% csrf_token %}
+			{{ form.as_p }}
+			<input type="submit" value="Make me a robot!">
+		</form>
+		{% if output %}
+			<div class="robots">
+				<h2>{% if is_robot %}A meat-sack would say . . .{% else %}A robot would say . . .{% endif %}</h2>
+				<p class="robot">{{ output }}</p>
+			</div>
+		{% endif %}
+	</div>
+{% endblock %}
+{% block footer %}
+	<div class="themsFooterStuffs">
+		<p>Made by <a href="http://digitalfabricsolutions.com">Max Clarke</a></p>
+		{{count}} successful robots made so far. . .
+	</div>
+{% endblock %}
